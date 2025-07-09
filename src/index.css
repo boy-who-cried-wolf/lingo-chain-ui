@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark theme colors */
+    --color-primary: #FFC800;
+    --color-error: #A83838;
+    --color-button-default: #272727;
+    
+    /* Background colors */
+    --color-bg-primary: #0F0F0F;
+    --color-bg-secondary: #1A1A1A;
+    --color-bg-tertiary: #272727;
+    
+    /* Surface colors */
+    --color-surface-primary: #1A1A1A;
+    --color-surface-secondary: #272727;
+    --color-surface-tertiary: #383838;
+    
+    /* Text colors */
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #E3E3E3;
+    --color-text-tertiary: #A4A4A4;
+    --color-text-muted: #666666;
+  }
+
+  * {
+    @apply border-border-primary;
+  }
+
+  body {
+    @apply bg-background-primary text-text-primary;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    @apply bg-background-primary;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-black font-semibold px-4 py-2 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-button-default hover:bg-button-hover text-text-primary font-semibold px-4 py-2 rounded-lg transition-colors duration-200 border border-border-secondary;
+  }
+  
+  .btn-error {
+    @apply bg-error-500 hover:bg-error-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-surface-primary border border-border-secondary rounded-lg shadow-lg;
+  }
+  
+  .input {
+    @apply bg-surface-secondary border border-border-secondary text-text-primary rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+}
