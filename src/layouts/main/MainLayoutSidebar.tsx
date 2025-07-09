@@ -1,6 +1,13 @@
 import React from 'react';
 import Logo from '../../components/logo';
 import MainLayoutSidebarButton from './MainLayoutSidebarButton';
+import {
+  OverviewIcon,
+  CategoriesIcon,
+  AiMentorIcon,
+  CreateEarnIcon,
+  SettingsIcon
+} from '../../components/icons';
 
 const MainLayoutSidebar: React.FC = () => (
   <aside className="w-80 h-screen bg-black/5 backdrop-blur-[27px] border-r border-border-secondary flex flex-col p-4 relative">
@@ -21,51 +28,35 @@ const MainLayoutSidebar: React.FC = () => (
         {[{
           to: "/overview",
           label: "Overview",
+          icon: <OverviewIcon size={18} />,
           isActive: true
         }, {
           to: "/courses",
           label: "Categories",
+          icon: <CategoriesIcon size={18} />,
         }, {
           to: "/ai-mentor",
           label: "AI Mentor",
+          icon: <AiMentorIcon size={18} />,
         }, {
           to: "/create-earn",
           label: "Create & Earn",
+          icon: <CreateEarnIcon size={18} />,
         }, {
           to: "/settings",
           label: "Setting",
+          icon: <SettingsIcon size={18} />,
         }].map((item) => (
           <MainLayoutSidebarButton
             key={item.to}
             to={item.to}
             label={item.label}
+            icon={item.icon}
             isActive={item.isActive}
           />
         ))}
       </nav>
 
-      {/* Premium section */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-72 h-60 bg-gradient-to-br from-white/10 to-transparent rounded-xl relative overflow-hidden shadow-lg">
-        <div className="absolute inset-0 bg-dark-900 rounded-xl shadow-inner"></div>
-        <div className="absolute w-72 h-12 left-5 top-56 bg-primary-500 blur-[41px]"></div>
-
-        <div className="relative flex flex-col items-center pt-5 gap-6">
-          <div className="text-center">
-            <h3 className="text-text-primary/80 font-normal text-[16px] leading-[18px] text-center">
-              Unlock Premium Resources & Features
-            </h3>
-          </div>
-
-          <div className="flex items-start p-1.5 gap-2 w-44 h-14 bg-black/82 rounded-2xl shadow-lg">
-            <div className="w-40 h-12 bg-gradient-to-br from-white/10 to-transparent rounded-xl relative shadow-inner">
-              <div className="absolute inset-0 bg-dark-900 rounded-xl"></div>
-              <div className="relative flex items-center justify-center h-full">
-                <span className="text-text-primary font-normal text-sm text-center">Upgrade</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </aside>
 );
