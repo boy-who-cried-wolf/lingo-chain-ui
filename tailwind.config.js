@@ -68,6 +68,9 @@ module.exports = {
       borderColor: {
         'border-primary': '#272727',
         'border-secondary': '#383838',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)',
       }
     },
   },

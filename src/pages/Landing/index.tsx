@@ -11,7 +11,7 @@ const Landing: React.FC = () => (
         track your progress, and achieve fluency faster than ever before.
       </p>
     </div>
-    <Link to="/dashboard" className="btn-primary">
+    <Link to="/overview" className="btn-primary">
       Start Learning
     </Link>
   </div>
