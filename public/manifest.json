@@ -1,6 +1,7 @@
 {
-  "short_name": "Lingo Chain",
-  "name": "Lingo Chain - Language Learning Platform",
+  "short_name": "LingoChain",
+  "name": "LingoChain - Crypto Learning Platform",
+  "description": "The fun way to learn crypto. Master blockchain technology with interactive learning tools.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,5 +22,7 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#FFC800",
-  "background_color": "#0F0F0F"
+  "background_color": "#0F0F0F",
+  "categories": ["education", "finance", "productivity"],
+  "lang": "en"
 }
