@@ -58,6 +58,18 @@ module.exports = {
           secondary: '#E3E3E3',
           tertiary: '#A4A4A4',
           muted: '#666666',
+        },
+        golden: {
+          50: '#FDFBF0',
+          100: '#FAF6E0',
+          200: '#F5EDC0',
+          300: '#EFE3A0',
+          400: '#EAD980',
+          500: '#CBB85B', // Golden color from design
+          600: '#B8A54A',
+          700: '#A59239',
+          800: '#927F28',
+          900: '#7F6C17',
         }
       },
       backgroundColor: {
@@ -71,8 +83,23 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(62.56% 62.56% at 28.14% -10.42%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%)',
+        'gradient-radial-golden': 'radial-gradient(circle, rgba(203, 184, 91, 0.2) 0%, rgba(203, 184, 91, 0.1) 50%, transparent 100%)',
+        'gradient-radial-golden-large': 'radial-gradient(circle, rgba(203, 184, 91, 0.15) 0%, rgba(203, 184, 91, 0.05) 70%, transparent 100%)',
+        'gradient-border-white': 'linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%)',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.gradient-border-mask': {
+          'mask': 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+          'mask-composite': 'exclude',
+          '-webkit-mask': 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+          '-webkit-mask-composite': 'xor',
+          'padding': '1px',
+        },
+      })
+    }
+  ],
 } 

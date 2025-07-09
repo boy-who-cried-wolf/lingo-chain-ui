@@ -6,8 +6,28 @@ const MainLayoutHeader: React.FC = () => {
   const location = useLocation();
 
   return (
-    <header className="bg-surface-secondary border-b border-border-secondary p-4 text-text-primary font-semibold capitalize">
-      {location.pathname.split('/').pop()}
+    <header className="h-20 py-4 pr-4 relative">
+      {/* Main container with glassmorphism effect */}
+      <div className="w-full h-full relative overflow-hidden rounded-2xl">
+        {/* Backdrop blur effect */}
+        <div className="absolute inset-0 backdrop-blur-[27px]"></div>
+        
+        {/* Main background - dark with transparency */}
+        <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
+
+        {/* Border gradient - dark to transparent */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/10 to-transparent"></div>
+
+        {/* Border with gradient */}
+        <div className="absolute inset-0 rounded-2xl border border-white/20"></div>
+
+        {/* Content container */}
+        <div className="relative z-10 p-4 h-full flex items-center">
+          <span className="text-text-primary font-semibold capitalize">
+            {location.pathname.split('/').pop()}
+          </span>
+        </div>
+      </div>
     </header>
   );
 }
