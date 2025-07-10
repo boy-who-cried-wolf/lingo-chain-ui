@@ -20,10 +20,10 @@ const LightSimpleBlurContainer: React.FC<LightSimpleBlurContainerProps> = ({
             <div className="absolute inset-0 rounded-3xl bg-white/5" />
 
             {/* Gradient border - using Tailwind utilities */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-border-white gradient-border-mask" />
+            <div className="absolute inset-0 rounded-3xl bg-gradient-border-white gradient-border-mask opacity-60" />
 
             {/* Content container */}
-            <div className="relative w-full h-full rounded-3xl overflow-hidden">
+            <div className="relative w-full h-full rounded-3xl">
                 {children}
             </div>
         </div>
