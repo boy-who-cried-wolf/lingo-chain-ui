@@ -1,11 +1,11 @@
 import React, { PropsWithChildren } from 'react';
 
-interface LightSimpleContainerProps {
+interface IconButtonContainerProps {
     className?: string;
     onClick?: () => void;
 }
 
-const LightSimpleContainer: React.FC<PropsWithChildren<LightSimpleContainerProps>> = ({
+const IconButtonContainer: React.FC<PropsWithChildren<IconButtonContainerProps>> = ({
     className = '',
     children,
     onClick
@@ -38,4 +38,4 @@ const LightSimpleContainer: React.FC<PropsWithChildren<LightSimpleContainerProps
     );
 };
 
-export default LightSimpleContainer; 
+export default IconButtonContainer; 
