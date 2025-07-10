@@ -41,12 +41,12 @@ const OverviewMap = () => {
                 <path d="M261.168 129.534C265.327 129.534 268.7 132.833 268.7 136.902V145.614C268.7 149.683 265.327 152.982 261.168 152.982H246.237C242.077 152.982 238.705 149.683 238.705 145.614V136.902C238.705 132.833 242.077 129.534 246.237 129.534H261.168ZM253.693 137.777C252.833 137.777 252.133 138.461 252.133 139.303V143.196C252.133 144.055 252.833 144.739 253.693 144.739C254.572 144.739 255.271 144.055 255.271 143.196V139.303C255.271 138.461 254.572 137.777 253.693 137.777Z" fill="white" />
 
                 {/* glow effect */}
-                <g style={{ mixBlendMode: 'plus-lighter' }} filter="url(#filter6_f_0_1)">
+                {/* <g style={{ mixBlendMode: 'plus-lighter' }} filter="url(#filter6_f_0_1)">
                     <rect x="90.3281" y="141.56" width="42.5658" height="42.5658" rx="21.2829" fill="#FFC800" />
                 </g>
                 <g style={{ mixBlendMode: 'plus-lighter' }} filter="url(#filter7_f_0_1)">
                     <rect x="70.8696" y="141.56" width="42.5658" height="42.5658" rx="21.2829" fill="#FFC800" />
-                </g>
+                </g> */}
 
                 {/* take skill quiz to start */}
                 <g filter="url(#filter8_n_0_1)">
