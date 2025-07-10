@@ -17,20 +17,18 @@ const MainLayoutSidebar: React.FC = () => {
     <aside className="w-80 h-screen p-4 relative">
       {/* Main container with glassmorphism effect */}
       <div className="w-full h-full relative overflow-hidden rounded-2xl">
-        {/* Backdrop blur effect */}
-        <div className="absolute inset-0 backdrop-blur-[27px]"></div>
-        
+
         {/* Main background - dark with transparency */}
-        <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
+        <div className="absolute inset-0 bg-black rounded-2xl opacity-10"></div>
 
         {/* Border gradient - dark to transparent */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/10 to-transparent"></div>
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-background-tertiary to-primary-500/5 opacity-50"></div>
 
         {/* Border with gradient */}
-        <div className="absolute inset-0 rounded-2xl border border-white/20"></div>
+        <div className="absolute inset-0 rounded-2xl border border-white/20 opacity-15"></div>
 
         {/* Content container */}
-        <div className="relative z-10 p-4 h-full flex flex-col">
+        <div className="relative z-10 p-4 h-full flex flex-col backdrop-blur-3xl">
           {/* Logo section */}
           <div className="flex items-center gap-1.5 p-4">
             <Logo variant="logo-with-label" />
