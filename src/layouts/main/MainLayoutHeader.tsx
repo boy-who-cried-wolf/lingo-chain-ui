@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import DarkSimpleContainer from '../../components/container/DarkSimpleContainer';
 import ProfileHeader from './profile/ProfileHeader';
 
 const MainLayoutHeader: React.FC = () => {

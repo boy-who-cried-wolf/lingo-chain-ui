@@ -2,15 +2,18 @@ import React, { PropsWithChildren } from 'react';
 
 interface LightSimpleContainerProps {
     className?: string;
+    onClick?: () => void;
 }
 
 const LightSimpleContainer: React.FC<PropsWithChildren<LightSimpleContainerProps>> = ({
     className = '',
-    children
+    children,
+    onClick
 }) => {
     return (
         <div
             className={`relative overflow-hidden rounded-full`}
+            onClick={onClick}
         >
             {/* Main background with lighter color */}
             <div className="absolute inset-0 bg-[#292929] rounded-full"></div>
