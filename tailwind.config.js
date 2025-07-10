@@ -55,7 +55,7 @@ module.exports = {
         },
         text: {
           primary: '#FFFFFF',
-          secondary: '#E3E3E3',
+          secondary: '#AFAFAF',
           tertiary: '#A4A4A4',
           muted: '#666666',
         },

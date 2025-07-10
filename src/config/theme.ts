@@ -26,7 +26,7 @@ export const theme = {
     },
     dark: {
       50: '#F7F7F7',
-      100: '#E3E3E3',
+      100: '#AFAFAF',
       200: '#C8C8C8',
       300: '#A4A4A4',
       400: '#818181',
@@ -49,7 +49,7 @@ export const theme = {
     },
     text: {
       primary: '#FFFFFF',
-      secondary: '#E3E3E3',
+      secondary: '#AFAFAF',
       tertiary: '#A4A4A4',
       muted: '#666666',
     }
