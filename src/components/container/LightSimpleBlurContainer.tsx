@@ -13,7 +13,7 @@ const LightSimpleBlurContainer: React.FC<LightSimpleBlurContainerProps> = ({
 }) => {
     return (
         <div
-            className={`rounded-3xl backdrop-blur-xl ${className}`}
+            className={`relative rounded-3xl backdrop-blur-xl ${className}`}
             style={style}
         >
             {/* Background with white opacity */}

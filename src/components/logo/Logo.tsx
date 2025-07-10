@@ -8,7 +8,7 @@ interface LogoProps {
   className?: string;
 }
 
-const Logo: React.FC<LogoProps> = ({ variant = 'logo-with-label', className = '' }) => {
+const Logo: React.FC<LogoProps> = ({ variant = 'logo', className = '' }) => {
   const logoSrc = variant === 'logo' ? logo : logoWithLabel;
   
   return (
