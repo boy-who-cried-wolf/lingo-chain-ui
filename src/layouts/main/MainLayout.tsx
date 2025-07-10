@@ -1,12 +1,11 @@
 import React from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
-import MainLayoutSidebar from './MainLayoutSidebar';
-import MainLayoutHeader from './MainLayoutHeader';
-import MainLayoutBottomNav from './MainLayoutBottomNav';
+import { Outlet } from 'react-router-dom';
 import bgPattern from '../../assets/images/bg/bg-pattern.svg';
+import MainLayoutBottomNav from './MainLayoutBottomNav';
+import MainLayoutHeader from './MainLayoutHeader';
+import MainLayoutSidebar from './MainLayoutSidebar';
 
-const DashboardLayout: React.FC = () => {
-  const location = useLocation();
+const MainLayout: React.FC = () => {
 
   return (
     <div className="min-h-screen flex relative overflow-hidden">
@@ -60,4 +59,4 @@ const DashboardLayout: React.FC = () => {
   );
 };
 
-export default DashboardLayout; 
+export default MainLayout; 
