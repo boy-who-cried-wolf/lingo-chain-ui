@@ -7,7 +7,7 @@ const MainLayoutHeader: React.FC = () => {
   const location = useLocation();
 
   return (
-    <header className="py-4 pr-4 relative">
+    <header className="py-4 lg:pr-4 lg:pl-0 px-4 relative">
       {/* Main container with glassmorphism effect */}
       <div className="w-full h-full relative overflow-hidden rounded-2xl">
         {/* Backdrop blur effect */}

@@ -33,44 +33,25 @@ const DashboardLayout: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-radial-golden rounded-full blur-2xl opacity-50" />
         </div>
       </div>
-      
+
       {/* Content */}
       <div className="relative z-10 flex w-full">
         {/* Desktop Sidebar - hidden on mobile */}
         <div className="hidden lg:block">
           <MainLayoutSidebar />
         </div>
-        
+
         <div className="flex-1 flex flex-col">
           {/* Desktop Header - hidden on mobile */}
-          <div className="hidden lg:block">
-            <MainLayoutHeader />
-          </div>
-          
-          {/* Mobile Header - shown only on mobile */}
-          <div className="lg:hidden">
-            <header className="h-16 py-3 px-4 relative">
-              <div className="w-full h-full relative overflow-hidden rounded-2xl">
-                <div className="absolute inset-0 backdrop-blur-[27px]"></div>
-                <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/10 to-transparent"></div>
-                <div className="absolute inset-0 rounded-2xl border border-white/20"></div>
-                <div className="relative z-10 p-4 h-full flex items-center">
-                  <span className="text-text-primary font-semibold capitalize">
-                    {location.pathname.split('/').pop() || 'Overview'}
-                  </span>
-                </div>
-              </div>
-            </header>
-          </div>
-          
+          <MainLayoutHeader />
+
           {/* Main content area */}
           <main className="flex-1 p-4 lg:p-6 pb-20 lg:pb-6">
             <Outlet />
           </main>
         </div>
       </div>
-      
+
       {/* Mobile Bottom Navigation - shown only on mobile */}
       <div className="lg:hidden">
         <MainLayoutBottomNav />
